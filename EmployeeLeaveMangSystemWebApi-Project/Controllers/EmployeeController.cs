@@ -1,16 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using EmployeeLeaveMang.ServiceLayer;
-using EmployeeLeaveMang.DomainLayer.Models;
 
-
-namespace EmployeeLeaveMangSystemWebApi_Project
+namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-       
-
     }
 }
