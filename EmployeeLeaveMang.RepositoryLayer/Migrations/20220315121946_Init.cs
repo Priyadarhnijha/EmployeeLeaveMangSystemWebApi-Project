@@ -19,6 +19,26 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                 {
                     table.PrimaryKey("PK_EmployeeClassDetail", x => x.EmpId);
                 });
+
+
+
+            migrationBuilder.CreateTable(
+               name: "EmployeeLeaveType",
+               columns: table => new
+               {
+                   LeaveType = table.Column<string>(type: "String", nullable: false)
+                       .Annotation("SqlServer:Identity", "1, 1"),
+                   LeaveDays = table.Column<int>(type: "nvarchar(3)", nullable: false),
+                   EmpId = table.Column<int>(type: "int", nullable: false)
+               },
+               constraints: table =>
+               {
+                   table.PrimaryKey("PK_EmployeeLeaveType", x => x.EmpId);
+               });
+
+
+
+
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
