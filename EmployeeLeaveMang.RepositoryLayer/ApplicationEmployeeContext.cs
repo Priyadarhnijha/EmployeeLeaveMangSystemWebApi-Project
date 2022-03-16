@@ -8,10 +8,10 @@ using EmployeeLeaveMang.DomainLayer.Models;
 
 namespace EmployeeLeaveMang.RepositoryLayer
 {
-    public class AppContext : DbContext
+    public class ApplicationEmployeeContext : DbContext
 
     {
-        public AppContext(DbContextOptions options) : base(options)
+        public ApplicationEmployeeContext(DbContextOptions options) : base(options)
         {
         
         }

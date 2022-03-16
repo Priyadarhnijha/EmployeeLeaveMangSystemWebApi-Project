@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmployeeLeaveMang.RepositoryLayer.Migrations
 {
-    [DbContext(typeof(AppContext))]
+    [DbContext(typeof(ApplicationEmployeeContext))]
     [Migration("20220315121946_Init")]
     partial class Init
     {

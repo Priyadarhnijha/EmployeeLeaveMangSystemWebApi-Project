@@ -12,6 +12,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using EmployeeLeaveMang.RepositoryLayer;
+using EmployeeLeaveMang.ServiceLayer;
+
 
 
 namespace EmployeeLeaveMangSystemWebApi_Project
@@ -30,8 +32,9 @@ namespace EmployeeLeaveMangSystemWebApi_Project
         {
 
             services.AddControllers();
+            services.AddScoped<InterfaceEmployeeService,EmployeeService>();
 
-            services.AddDbContext<EmployeeLeaveMang.RepositoryLayer.AppContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConStr")));
+            services.AddDbContext<ApplicationEmployeeContext>(x => x.UseSqlServer(Configuration.GetConnectionString("ConStr")));
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "EmployeeLeaveMangSystemWebApi_Project", Version = "v1" });
