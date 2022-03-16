@@ -13,28 +13,28 @@ namespace EmployeeLeaveMang.ServiceLayer
     {
         public ApplicationEmployeeContext ApplicationEmployeeContext;
 
-        public EmployeeService(ApplicationEmployeeContext ApplicationEmployeeContext)
+        public EmployeeService(ApplicationEmployeeContext applicationEmployeeContext)
         {
-            ApplicationEmployeeContext = ApplicationEmployeeContext;
+            this.ApplicationEmployeeContext = applicationEmployeeContext;
         }
 
         //public EmployeeService(ApplicationEmployeeContext ApplicationEmployeeContext)
         //{
         //    ApplicationEmployeeContext = ApplicationEmployeeContext;
         //}
-       public  IList<EmployeeClass>GetAllEmployeeClasses(string EmpName)
-        {
-          return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
-        }
+       //public  IList<EmployeeClass>GetAllEmployeeClasses(string EmpName)
+       // {
+       //   return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
+       // }
 
-        IList<EmployeeClass> InterfaceEmployeeService.GetAllEmployeeClass()
-        {
-            throw new NotImplementedException();
-        }
+        //IList<EmployeeClass> InterfaceEmployeeService.GetAllEmployeeClass()
+        //{
+        //    throw new NotImplementedException();
+        //}
 
-        public EmployeeClass GetEmployeeClasses(string EmpName)
+        public EmployeeClass GetEmployeeClasses(int EmpId)
         {
-            return ApplicationEmployeeContext.Find<EmployeeClass>(EmpName);
+            return ApplicationEmployeeContext.Find<EmployeeClass>(EmpId);
         }
 
        public  void InsertEmployee(EmployeeClass employee)
@@ -51,9 +51,9 @@ namespace EmployeeLeaveMang.ServiceLayer
 
         }
 
-        object InterfaceEmployeeService.GetAllEmployeeClasses()
-        {
-            throw new NotImplementedException();
-        }
+        // void  InterfaceEmployeeService.GetAllEmployeeClasses()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

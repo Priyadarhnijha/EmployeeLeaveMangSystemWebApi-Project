@@ -12,13 +12,23 @@ namespace EmployeeLeaveMang.ServiceLayer
 {
      public  interface InterfaceEmployeeService
     {
-        IList<EmployeeClass> GetAllEmployeeClasses(String EmpName);
-        EmployeeClass GetEmployeeClasses(String EmpName);
+       // IList<EmployeeClass> GetAllEmployeeClasses(String EmpName);
+
+
+
+        EmployeeClass GetEmployeeClasses(int EmpId);
 
         void InsertEmployee(EmployeeClass employee);
         void UpdateEmployee(EmployeeClass employee);
-        object GetAllEmployeeClasses();
-        IList<EmployeeClass> GetAllEmployeeClass();
+
+
+
+
+
+
+        //object GetAllEmployeeClasses();
+      //  IList<EmployeeClass> GetAllEmployeeClass();
+       // object GetAllEmployeeClasses();
 
         //void DeleteEmployee(String EmpName);
 

@@ -14,26 +14,26 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
         #region "Constructor init"
         public EmployeeController(InterfaceEmployeeService EmployeeService)
         {
-            EmployeeService = EmployeeService;
+            this.EmployeeService = EmployeeService;
         }
         #endregion
 
         #region "Api Core Functionality"
-        [HttpGet(nameof(GetAllEmployeeClasses))]
-        public ActionResult GetAllEmployeeClasses()
-        {
-            var EmployeeClass = EmployeeService.GetAllEmployeeClasses();
-            if (EmployeeClass != null && EmployeeClass.Count > 0)
-            {
-                return Ok(EmployeeClass);
-            }
-            return BadRequest("Not found");
-        }
+        //[HttpGet(nameof(GetAllEmployeeClasses))]
+        //public ActionResult GetAllEmployeeClasses()
+        //{
+        //    var Employees = EmployeeService.GetAllEmployeeClasses();
+        //    if (Employees != null && Employees.Count > 1)
+        //    {
+        //        return Ok(Employees);
+        //    }
+        //    return BadRequest("Not found");
+        //}
         #endregion
         [HttpGet(nameof(GetEmployeeClasses))]
-        public ActionResult GetEmployeeClasses(string name)
+        public ActionResult GetEmployeeClasses(int EmpId)
         {
-            var EmployeeClass = EmployeeService.GetEmployeeClasses(name);
+            var EmployeeClass = EmployeeService.GetEmployeeClasses(EmpId);
             if (EmployeeClass != null)
             {
                 return Ok(EmployeeClass);

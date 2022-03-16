@@ -14,7 +14,7 @@ namespace EmployeeLeaveMang.DomainLayer.Models
         public int EmpId { get; set; }
         public string EmpName { get; set; }
 
-        public char EmpGender { get; set; }
+        public string EmpGender { get; set; }
 
 
     }

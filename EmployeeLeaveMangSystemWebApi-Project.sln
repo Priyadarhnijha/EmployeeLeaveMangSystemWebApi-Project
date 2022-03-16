@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLeaveMangSystemWebApi-Project", "EmployeeLeaveMangSystemWebApi-Project\EmployeeLeaveMangSystemWebApi-Project.csproj", "{13F63A09-2B41-4876-A2B4-BDEC8DE64748}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLeaveMangSystemWebApi-Project", "EmployeeLeaveMangSystemWebApi-Project\EmployeeLeaveMangSystemWebApi-Project.csproj", "{13F63A09-2B41-4876-A2B4-BDEC8DE64748}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLeaveMang.DomainLayer", "EmployeeLeaveMang.DomainLayer\EmployeeLeaveMang.DomainLayer.csproj", "{0CC74577-936C-47C9-A146-49FF51C54953}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLeaveMang.DomainLayer", "EmployeeLeaveMang.DomainLayer\EmployeeLeaveMang.DomainLayer.csproj", "{0CC74577-936C-47C9-A146-49FF51C54953}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLeaveMang.RepositoryLayer", "EmployeeLeaveMang.RepositoryLayer\EmployeeLeaveMang.RepositoryLayer.csproj", "{5AD37C59-2942-4C86-B638-546FF7BC9FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLeaveMang.RepositoryLayer", "EmployeeLeaveMang.RepositoryLayer\EmployeeLeaveMang.RepositoryLayer.csproj", "{5AD37C59-2942-4C86-B638-546FF7BC9FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeLeaveMang.ServiceLayer", "EmployeeLeaveMang.ServiceLayer\EmployeeLeaveMang.ServiceLayer.csproj", "{7B679189-4FBF-49F2-A629-91859E3F19A1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeLeaveMang.ServiceLayer", "EmployeeLeaveMang.ServiceLayer\EmployeeLeaveMang.ServiceLayer.csproj", "{7B679189-4FBF-49F2-A629-91859E3F19A1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2605912D-ED5A-4336-9B34-E5C020B13C53}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

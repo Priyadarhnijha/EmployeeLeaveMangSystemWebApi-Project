@@ -12,8 +12,8 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                 {
                     EmpId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    EmpName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    EmpGender = table.Column<string>(type: "nvarchar(1)", nullable: false)
+                    EmpName = table.Column<string>(type: "String(max)", nullable: false),
+                    EmpGender = table.Column<string>(type: "String(1)", nullable: false)
                 },
                 constraints: table =>
                 {
