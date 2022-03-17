@@ -18,6 +18,11 @@ namespace EmployeeLeaveMangSystemWebApi_Project
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+                .ConfigureLogging((logging) =>
+                {
+                    logging.AddFile("AppLogs/EmployeeAppLogs{Date}.txt");
+
+                })
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();

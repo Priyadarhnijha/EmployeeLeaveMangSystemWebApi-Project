@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using EmployeeLeaveMang.ServiceLayer;
 using EmployeeLeaveMang.DomainLayer.Models;
-
+using Microsoft.Extensions.Logging;
 
 namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
 {
@@ -11,6 +11,15 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly InterfaceEmployeeService EmployeeService;
+        private readonly ILogger<EmployeeController> _logger;
+
+        //public EmployeeController(InterfaceEmployeeService employeeService, ILogger<EmployeeController> logger) 
+        //{
+        //    _logger = logger;
+        //    _logger.LogInformation("Employee called");
+        //    EmployeeService = employeeService;  
+
+        //}
         #region "Constructor init"
         public EmployeeController(InterfaceEmployeeService EmployeeService)
         {
