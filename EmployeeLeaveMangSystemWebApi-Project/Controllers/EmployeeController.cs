@@ -30,10 +30,10 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
         //    return BadRequest("Not found");
         //}
         #endregion
-        [HttpGet(nameof(GetEmployeeClasses))]
-        public ActionResult GetEmployeeClasses(int EmpId)
+        [HttpGet(nameof(GetEmployeeById))]
+        public ActionResult GetEmployeeById(int EmpId)
         {
-            var EmployeeClass = EmployeeService.GetEmployeeClasses(EmpId);
+            var EmployeeClass = EmployeeService.GetEmployeeById(EmpId);
             if (EmployeeClass != null)
             {
                 return Ok(EmployeeClass);
@@ -53,6 +53,16 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             EmployeeService.UpdateEmployee(customer);
 
             return Ok("Employee Updated");
+        }
+        [HttpGet(nameof(GetAllEmployee))]
+        public ActionResult GetAllEmployee()
+        {
+            var EmployeeClass = EmployeeService.GetAllEmployee();
+            if (EmployeeClass != null)
+            {
+                return Ok(EmployeeClass);
+            }
+            return BadRequest("Not found");
         }
 
         //[HttpPut(nameof(DeleteCustomer))]

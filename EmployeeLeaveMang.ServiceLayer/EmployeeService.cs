@@ -22,17 +22,17 @@ namespace EmployeeLeaveMang.ServiceLayer
         //{
         //    ApplicationEmployeeContext = ApplicationEmployeeContext;
         //}
-       //public  IList<EmployeeClass>GetAllEmployeeClasses(string EmpName)
-       // {
-       //   return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
-       // }
+       public  IList<EmployeeClass>GetAllEmployee()
+        {
+          return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
+        }
 
         //IList<EmployeeClass> InterfaceEmployeeService.GetAllEmployeeClass()
         //{
         //    throw new NotImplementedException();
         //}
 
-        public EmployeeClass GetEmployeeClasses(int EmpId)
+        public EmployeeClass GetEmployeeById(int EmpId)
         {
             return ApplicationEmployeeContext.Find<EmployeeClass>(EmpId);
         }
