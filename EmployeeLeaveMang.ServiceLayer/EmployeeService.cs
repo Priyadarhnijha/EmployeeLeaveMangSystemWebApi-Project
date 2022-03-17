@@ -27,6 +27,10 @@ namespace EmployeeLeaveMang.ServiceLayer
           return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
         }
 
+        public IList<LeaveDetail>GetAllLeaveType()
+        {
+            return ApplicationEmployeeContext.Set<LeaveDetail>().ToList();
+        }
         //IList<EmployeeClass> InterfaceEmployeeService.GetAllEmployeeClass()
         //{
         //    throw new NotImplementedException();

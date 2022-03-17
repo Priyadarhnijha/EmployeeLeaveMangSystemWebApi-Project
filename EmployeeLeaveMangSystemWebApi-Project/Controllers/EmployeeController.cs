@@ -64,6 +64,16 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             }
             return BadRequest("Not found");
         }
+        [HttpGet(nameof(GetAllLeaveType))]
+        public ActionResult GetAllLeaveType()
+        {
+            var LeaveDetail = EmployeeService.GetAllLeaveType();
+            if (LeaveDetail != null)
+            {
+                return Ok(LeaveDetail);
+            }
+            return BadRequest("Not found");
+        }
 
         //[HttpPut(nameof(DeleteCustomer))]
         //public ActionResult DeleteCustomer(string customername)

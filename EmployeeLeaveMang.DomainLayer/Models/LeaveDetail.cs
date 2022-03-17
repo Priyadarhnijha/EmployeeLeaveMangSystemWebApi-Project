@@ -9,7 +9,7 @@ namespace EmployeeLeaveMang.DomainLayer.Models
 {
     public class LeaveDetail
     {
-        public string LeaveStatus { get; set; }
+        public int LeaveDuration { get; set; }
 
         [Key]
         public int LeaveId { get; set; }

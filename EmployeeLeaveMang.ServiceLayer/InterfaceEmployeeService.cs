@@ -14,6 +14,7 @@ namespace EmployeeLeaveMang.ServiceLayer
     {
        IList<EmployeeClass> GetAllEmployee();
 
+        IList<LeaveDetail>GetAllLeaveType();
 
 
         EmployeeClass GetEmployeeById(int EmpId);

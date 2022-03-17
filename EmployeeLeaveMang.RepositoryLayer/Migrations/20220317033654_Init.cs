@@ -29,7 +29,7 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                 {
                     LeaveId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    LeaveStatus = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LeaveDuration = table.Column<int>(type: "int", nullable: true),
                     LeaveType = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

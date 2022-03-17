@@ -52,8 +52,8 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("LeaveStatus")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<string>("LeaveDuration")
+                        .HasColumnType("int");
 
                     b.Property<string>("LeaveType")
                         .HasColumnType("nvarchar(max)");
