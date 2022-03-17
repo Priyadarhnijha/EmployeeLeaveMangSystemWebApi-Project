@@ -1,27 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.ComponentModel.DataAnnotations;
 
 namespace EmployeeLeaveMang.DomainLayer.Models
 {
-
-    public class EmployeeClass
+    public class LeaveDetail
     {
-        [Key]
-        public int EmpId { get; set; }
-
-        public string EmpName { get; set; }
-
-        public string EmpGender { get; set; }
-
         public string LeaveStatus { get; set; }
 
+        [Key]
         public int LeaveId { get; set; }
 
         public string LeaveType { get; set; }
-
     }
 }

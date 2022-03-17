@@ -21,4 +21,8 @@
     <ProjectReference Include="..\EmployeeLeaveMang.DomainLayer\EmployeeLeaveMang.DomainLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>

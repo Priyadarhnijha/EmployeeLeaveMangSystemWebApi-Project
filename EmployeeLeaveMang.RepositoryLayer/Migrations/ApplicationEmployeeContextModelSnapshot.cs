@@ -3,16 +3,14 @@ using EmployeeLeaveMang.RepositoryLayer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
-using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmployeeLeaveMang.RepositoryLayer.Migrations
 {
     [DbContext(typeof(ApplicationEmployeeContext))]
-    [Migration("20220315121946_Init")]
-    partial class Init
+    partial class ApplicationEmployeeContextModelSnapshot : ModelSnapshot
     {
-        protected override void BuildTargetModel(ModelBuilder modelBuilder)
+        protected override void BuildModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -28,15 +26,41 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("EmpGender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(1)");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("EmpName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LeaveId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LeaveStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LeaveType")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EmpId");
 
                     b.ToTable("EmployeeClassDetail");
+                });
+
+            modelBuilder.Entity("EmployeeLeaveMang.DomainLayer.Models.LeaveDetail", b =>
+                {
+                    b.Property<int>("LeaveId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("LeaveStatus")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LeaveType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("LeaveId");
+
+                    b.ToTable("LeaveDetails");
                 });
 #pragma warning restore 612, 618
         }
