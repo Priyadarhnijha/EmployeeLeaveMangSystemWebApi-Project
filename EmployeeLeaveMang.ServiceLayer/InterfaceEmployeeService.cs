@@ -22,14 +22,16 @@ namespace EmployeeLeaveMang.ServiceLayer
         void InsertEmployee(EmployeeClass employee);
         void UpdateEmployee(EmployeeClass employee);
 
+        void ApplyPL(ApplyPlannedLeave employee);
 
-
+      
+        void DeletePLeave(int empId);
 
 
 
         //object GetAllEmployeeClasses();
-      //  IList<EmployeeClass> GetAllEmployeeClass();
-       // object GetAllEmployeeClasses();
+        //  IList<EmployeeClass> GetAllEmployeeClass();
+        // object GetAllEmployeeClasses();
 
         //void DeleteEmployee(String EmpName);
 

@@ -54,7 +54,29 @@ namespace EmployeeLeaveMang.ServiceLayer
             ApplicationEmployeeContext.SaveChanges();
 
         }
+        public void ApplyPL(ApplyPlannedLeave applyPlannedLeave)
+        {
+            ApplicationEmployeeContext.Add<ApplyPlannedLeave>(applyPlannedLeave);
+            ApplicationEmployeeContext.SaveChanges();
 
+        }
+        public void DeletePLeave(int EmpId)
+        {
+            ApplyPlannedLeave applyPlannedLeave = GetLeave(EmpId);
+            if (applyPlannedLeave != null)
+            {
+                ApplicationEmployeeContext.Remove<ApplyPlannedLeave>(applyPlannedLeave);
+                ApplicationEmployeeContext.SaveChanges();
+            }
+            //throw new NotImplementedException();
+        }
+
+        private ApplyPlannedLeave GetLeave(int EmpId)
+        {
+            return ApplicationEmployeeContext.Find<ApplyPlannedLeave>(EmpId);
+
+            //throw new NotImplementedException();
+        }
         // void  InterfaceEmployeeService.GetAllEmployeeClasses()
         //{
         //    throw new NotImplementedException();

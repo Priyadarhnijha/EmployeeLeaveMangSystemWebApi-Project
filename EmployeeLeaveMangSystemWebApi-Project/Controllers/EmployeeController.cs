@@ -74,14 +74,21 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             }
             return BadRequest("Not found");
         }
+        [HttpPost(nameof(ApplyPLeave))]
+        public ActionResult ApplyPLeave(ApplyPlannedLeave applyPlannedLeave)
+        {
+            EmployeeService.ApplyPL(applyPlannedLeave);
 
-        //[HttpPut(nameof(DeleteCustomer))]
-        //public ActionResult DeleteCustomer(string customername)
-        //{
-        //    EmployeeService.DeleteCustomer(customername);
+            return Ok("Leave Applied Successfully");
+        }
 
-        //    return Ok("Customer Deleted");
-        //}
+        [HttpPut(nameof(CancelPlannedLeave))]
+        public ActionResult CancelPlannedLeave(int EmpId)
+        {
+            EmployeeService.DeletePLeave(EmpId);
+
+            return Ok("Leave Cancelled");
+        }
 
     }
 }

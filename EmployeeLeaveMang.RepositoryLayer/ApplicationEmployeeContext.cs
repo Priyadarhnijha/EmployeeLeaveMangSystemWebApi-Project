@@ -17,5 +17,7 @@ namespace EmployeeLeaveMang.RepositoryLayer
         }
         DbSet<EmployeeClass> EmployeeClassDetail { get; set; }
         DbSet<LeaveDetail> LeaveDetails { get; set; }
+
+        DbSet<ApplyPlannedLeave> ApplyPlannedLeaves { get; set; }
     }
 }

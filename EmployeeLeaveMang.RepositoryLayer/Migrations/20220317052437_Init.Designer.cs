@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EmployeeLeaveMang.RepositoryLayer.Migrations
 {
     [DbContext(typeof(ApplicationEmployeeContext))]
-    [Migration("20220317033654_Init")]
+    [Migration("20220317052437_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -19,6 +19,27 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("EmployeeLeaveMang.DomainLayer.Models.ApplyPlannedLeave", b =>
+                {
+                    b.Property<int>("EmpId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("EmpName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LeaveDuration")
+                        .HasColumnType("int");
+
+                    b.Property<string>("LeaveReason")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("EmpId");
+
+                    b.ToTable("ApplyPlannedLeaves");
+                });
 
             modelBuilder.Entity("EmployeeLeaveMang.DomainLayer.Models.EmployeeClass", b =>
                 {
@@ -54,8 +75,8 @@ namespace EmployeeLeaveMang.RepositoryLayer.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("LeaveStatus")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("LeaveDuration")
+                        .HasColumnType("int");
 
                     b.Property<string>("LeaveType")
                         .HasColumnType("nvarchar(max)");
