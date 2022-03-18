@@ -13,53 +13,66 @@ namespace EmployeeLeaveMang.ServiceLayer
     {
         public ApplicationEmployeeContext ApplicationEmployeeContext;
 
+        #region "Constructor Employee Service Class"
         public EmployeeService(ApplicationEmployeeContext applicationEmployeeContext)
         {
             this.ApplicationEmployeeContext = applicationEmployeeContext;
         }
+        #endregion
 
         //public EmployeeService(ApplicationEmployeeContext ApplicationEmployeeContext)
         //{
         //    ApplicationEmployeeContext = ApplicationEmployeeContext;
         //}
-       public  IList<EmployeeClass>GetAllEmployee()
+        #region "Method for employee list"
+        public IList<EmployeeClass>GetAllEmployee()
         {
           return ApplicationEmployeeContext.Set<EmployeeClass>().ToList();
         }
+        #endregion
 
+        #region "Method for Leave Type "
         public IList<LeaveDetail>GetAllLeaveType()
         {
             return ApplicationEmployeeContext.Set<LeaveDetail>().ToList();
         }
-        //IList<EmployeeClass> InterfaceEmployeeService.GetAllEmployeeClass()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        #endregion
 
+        #region "Method to search Employee Leave Taken"
         public EmployeeClass GetEmployeeById(int EmpId)
         {
             return ApplicationEmployeeContext.Find<EmployeeClass>(EmpId);
         }
+        #endregion
 
-       public  void InsertEmployee(EmployeeClass employee)
+        #region "method for Add employee"
+        public void InsertEmployee(EmployeeClass employee)
         {
             ApplicationEmployeeContext.Add<EmployeeClass>(employee);
             ApplicationEmployeeContext.SaveChanges();
 
         }
+        #endregion
 
+        #region "Method for Update Employee data"
         void InterfaceEmployeeService.UpdateEmployee(EmployeeClass employee)
         {
             ApplicationEmployeeContext.Update<EmployeeClass>(employee);
             ApplicationEmployeeContext.SaveChanges();
 
         }
+        #endregion
+
+        #region " Method for Applying Planned leave"
         public void ApplyPL(ApplyPlannedLeave applyPlannedLeave)
         {
             ApplicationEmployeeContext.Add<ApplyPlannedLeave>(applyPlannedLeave);
             ApplicationEmployeeContext.SaveChanges();
 
         }
+        #endregion
+
+        #region  "Method to cancel planned leaves"
         public void DeletePLeave(int EmpId)
         {
             ApplyPlannedLeave applyPlannedLeave = GetLeave(EmpId);
@@ -68,18 +81,15 @@ namespace EmployeeLeaveMang.ServiceLayer
                 ApplicationEmployeeContext.Remove<ApplyPlannedLeave>(applyPlannedLeave);
                 ApplicationEmployeeContext.SaveChanges();
             }
-            //throw new NotImplementedException();
+            
         }
-
+        
         private ApplyPlannedLeave GetLeave(int EmpId)
         {
             return ApplicationEmployeeContext.Find<ApplyPlannedLeave>(EmpId);
 
-            //throw new NotImplementedException();
+            
         }
-        // void  InterfaceEmployeeService.GetAllEmployeeClasses()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        #endregion
     }
 }

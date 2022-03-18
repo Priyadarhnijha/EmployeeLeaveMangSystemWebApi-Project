@@ -39,6 +39,8 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
         //    return BadRequest("Not found");
         //}
         #endregion
+
+        #region "Search Employee Leave Taken"
         [HttpGet(nameof(GetEmployeeById))]
         public ActionResult GetEmployeeById(int EmpId)
         {
@@ -49,6 +51,8 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             }
             return BadRequest("Not found");
         }
+        #endregion
+        #region "Add Employee"
         [HttpPost(nameof(AddEmployee))]
         public ActionResult AddEmployee(EmployeeClass EmployeeClass)
         {
@@ -56,13 +60,17 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
 
             return Ok("Employee added");
         }
+        #endregion
+        #region "Update Employee Data"
         [HttpPut(nameof(UpdateEmployee))]
-        public ActionResult UpdateEmployee(EmployeeClass customer)
+        public ActionResult UpdateEmployee(EmployeeClass employee)
         {
-            EmployeeService.UpdateEmployee(customer);
+            EmployeeService.UpdateEmployee(employee);
 
             return Ok("Employee Updated");
         }
+        #endregion
+        #region "Search Employee List"
         [HttpGet(nameof(GetAllEmployee))]
         public ActionResult GetAllEmployee()
         {
@@ -73,6 +81,8 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             }
             return BadRequest("Not found");
         }
+        #endregion
+        #region "Leave Type"
         [HttpGet(nameof(GetAllLeaveType))]
         public ActionResult GetAllLeaveType()
         {
@@ -83,6 +93,8 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
             }
             return BadRequest("Not found");
         }
+        #endregion
+        #region "Apply Planned Leaves"
         [HttpPost(nameof(ApplyPLeave))]
         public ActionResult ApplyPLeave(ApplyPlannedLeave applyPlannedLeave)
         {
@@ -90,7 +102,9 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
 
             return Ok("Leave Applied Successfully");
         }
-
+        #endregion
+        
+        #region "Cancel Planned Leaves"
         [HttpPut(nameof(CancelPlannedLeave))]
         public ActionResult CancelPlannedLeave(int EmpId)
         {
@@ -98,6 +112,6 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
 
             return Ok("Leave Cancelled");
         }
-
+        #endregion
     }
 }
