@@ -23,18 +23,7 @@ namespace EmployeeLeaveMangSystemWebApi_Project.Controllers
         }
         #endregion
 
-        #region "Api Core Functionality"
-        //[HttpGet(nameof(GetAllEmployeeClasses))]
-        //public ActionResult GetAllEmployeeClasses()
-        //{
-        //    var Employees = EmployeeService.GetAllEmployeeClasses();
-        //    if (Employees != null && Employees.Count > 1)
-        //    {
-        //        return Ok(Employees);
-        //    }
-        //    return BadRequest("Not found");
-        //}
-        #endregion
+        
 
         #region "Search Employee Leave Taken"
         [HttpGet(nameof(GetEmployeeById))]
