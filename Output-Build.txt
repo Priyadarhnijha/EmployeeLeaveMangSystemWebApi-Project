@@ -1,1 +1,8 @@
-﻿
+﻿Build started...
+1>------ Build started: Project: EmployeeLeaveMang.ServiceLayer, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>EmployeeLeaveMang.ServiceLayer -> C:\Users\SHREYAS KABIRAJ\Desktop\sprint 1\EmployeeLMS\EmployeeLeaveMang.ServiceLayer\bin\Debug\net5.0\EmployeeLeaveMang.ServiceLayer.dll
+2>------ Build started: Project: EmployeeLeaveMangSystemWebApi-Project, Configuration: Debug Any CPU ------
+2>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+2>EmployeeLeaveMangSystemWebApi-Project -> C:\Users\SHREYAS KABIRAJ\Desktop\sprint 1\EmployeeLMS\EmployeeLeaveMangSystemWebApi-Project\bin\Debug\net5.0\EmployeeLeaveMangSystemWebApi-Project.dll
+========== Build: 2 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========

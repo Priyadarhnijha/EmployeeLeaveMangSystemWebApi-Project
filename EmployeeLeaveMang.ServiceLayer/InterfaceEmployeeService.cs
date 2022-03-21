@@ -28,13 +28,5 @@ namespace EmployeeLeaveMang.ServiceLayer
         void DeletePLeave(int empId);
 
 
-
-        //object GetAllEmployeeClasses();
-        //  IList<EmployeeClass> GetAllEmployeeClass();
-        // object GetAllEmployeeClasses();
-
-        //void DeleteEmployee(String EmpName);
-
-
     }
 }
