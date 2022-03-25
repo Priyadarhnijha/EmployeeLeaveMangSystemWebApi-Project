@@ -16,6 +16,7 @@ namespace EmployeeLeaveMang.DomainLayer.Models
         public int LeaveDuration { get; set; }
 
         public string LeaveReason { get; set; }
+       
 
     }
 }
